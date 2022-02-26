@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  padding: 1rem 1rem 0;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+}
+h2 span {
+  font-size: 1rem;
+  color: #666;
+}
+p {
+  color: #666;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #999;
+}
+
+.photo-list {
+  display: flex;
+  gap: 1rem;
+  width: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.photo-item {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  position: relative;
+  transition: .3s;
+}
+.photo-item > span {
+  display: block;
+}
+.photo-item > a {
+  font-size: 0;
+}
+.photo-item > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+.photo-footer {
+  color: #888;
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: .5rem 0;
+  font-size: .75rem;
+  background: rgba(0,0,0, .6);
+  margin-bottom: 0;
+}
+.photo-footer a {
+  color: #aaa;
+}
+.photo-item:hover {
+  box-shadow: 0 0 10px rgba(0,0,0, .6);
+  transform: scale(1.05);
+  position: relative;
+  z-index: 3;
+}
+.photo-item:hover .photo-footer {
+  display: block;
+}
+
+.search-form {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem;
+  background: rgba(255,255,255,.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+@media(max-width: 600px) {
+  .search-form input {
+    width: 60vw;
+  }
+}
+input {
+  background: #eee;
+}
+button {
+  background: #666;
+  color: #fff;
+  padding: .5rem;
+}
+button:hover {
+  background: #888;
+  transition: .3s;
+}
+input,
+button {
+  padding: .5rem;
+  border: 0;
+  font-size: 1.25rem;
+  font-family: 'Merriweather', serif;
+}
+
+.pagination {
+  margin-bottom: 2rem;
+}
+.pagination button {
+  margin: 0 .5rem;
+}
