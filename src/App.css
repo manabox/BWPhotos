@@ -125,3 +125,10 @@ button {
 .pagination button {
   margin: 0 .5rem;
 }
+
+footer p {
+  font-size: .75rem;
+}
+small {
+  font-size: unset;
+}
